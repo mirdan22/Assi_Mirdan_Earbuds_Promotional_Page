@@ -1,0 +1,148 @@
+@forward 'typography';
+@forward 'layout';
+/* hero.css */
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    box-shadow: #666;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-content {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #4e795f;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #4a8863;
+    }
+  }
+
+  header {
+    box-shadow: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #445d4e;
+    color: #fff;
+
+    .logo img {
+      height: 50px;
+    }
+
+    .main-nav {
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        li {
+          margin: 0 1rem;
+
+          a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+
+      .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+      }
+    }
+  }}
+
+   /* Tablet */
+   @media only screen and (max-width: 768px) {
+    header {
+      .menu-icon {
+        display: block;
+      }
+
+      .main-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #445d4e;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        ul {
+          padding: 1rem;
+          margin: 0;
+          text-align: center; /* Center the navigation links in the hamburger menu */
+        }
+
+        li {
+          margin: 1rem 0;
+
+          a {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: bold;
+          }
+        }
+      }
+
+      &.menu-open {
+        .main-nav {
+          display: flex;
+        }
+      }
+    
+  
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.logo {
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 1rem;
+  }
+
+  img {
+    height: 50px;
+  }
+}}
